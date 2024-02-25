@@ -21,7 +21,7 @@ const SignatureBox = () => {
 
   return (
     <div>
-        <div className='box'>
+        <div className='box mt-5'>
       <SignatureCanvas ref={signatureRef} penColor="black" canvasProps={{ width: 300, height: 500, className: 'sigCanvas',style: { backgroundColor: 'white' } }}  />
       </div>
     
