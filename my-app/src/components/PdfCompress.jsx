@@ -59,7 +59,7 @@ const PdfCompressor = () => {
         <div style={{ width: '315px', height: '300px', border:'2px solid black',display:'flex',alignItems:'center',justifyContent:'center'  }}>
         {console.log(pdfUrl)}
         </div>
-      <input type="file" accept=".pdf" onChange={handlePdfChange}  className='form-control my-2'/>
+      <input type="file" accept="application/pdf" onChange={handlePdfChange}  className='form-control my-2'/>
       <br />
       <button onClick={compressPdf} className='btn btn-primary my-2'>Compress PDF</button>
       <br />
