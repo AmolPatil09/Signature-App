@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "private": true,
+  "homepage": "https://amolpati07.github.io/Signature-App",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
