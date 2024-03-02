@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { PDFDocument } from 'pdf-lib';
-
+import { useNavigate } from 'react-router-dom'
 const PdfCompressor = () => {
   const [selectedPdf, setSelectedPdf] = useState(null);
   const [pdfUrl, setPdfUrl] = useState('');
   const [compressedPdf, setCompressedPdf] = useState(null);
-
+  const navigate=useNavigate();
   const handlePdfChange = (event) => {
     const file = event.target.files[0];
     setSelectedPdf(file);
@@ -66,6 +66,9 @@ const PdfCompressor = () => {
       <button onClick={downloadPdf} disabled={!compressedPdf} className='btn btn-primary my-2' >
         Download Compressed PDF
       </button>
+      <div>
+       <button className='btn btn-primary mb-3 ' onClick={()=>navigate("/Signature-App/")}>Back</button>
+       </div>
     </div>
   );
 };

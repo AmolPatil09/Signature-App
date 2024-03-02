@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import imageCompression from 'browser-image-compression';
-
+import { useNavigate } from 'react-router-dom'
 const ImageCompressor = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [compressedImage, setCompressedImage] = useState(null);
-
+  const navigate=useNavigate();
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     setSelectedImage(file);
@@ -67,6 +67,9 @@ const ImageCompressor = () => {
       <button onClick={downloadImage} disabled={!compressedImage} className='btn btn-primary'>
         Download Compressed Image
       </button>
+      <div >
+       <button className='btn btn-primary my-3 ' onClick={()=>navigate("/Signature-App/")}>Back</button>
+       </div>
     </div>
   );
 };

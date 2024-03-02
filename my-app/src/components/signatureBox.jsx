@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 import '../components/signature.css'
+import { useNavigate } from 'react-router-dom'
 const SignatureBox = () => {
   const signatureRef = useRef();
-
+  const navigate=useNavigate();
   const handleClear = () => {
     signatureRef.current.clear();
   };
@@ -27,7 +28,11 @@ const SignatureBox = () => {
     
       <button className='btn btn-primary m-2 col-5' onClick={handleClear}>Clear</button>
       <button className='btn btn-primary m-2 col-5' onClick={handleSave}>Save</button>
+      <div >
+       <button className='btn btn-primary mb-3 ' onClick={()=>navigate("/Signature-App/")}>Back</button>
+       </div>
       </div>
+       
   
   );
 };
