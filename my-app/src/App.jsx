@@ -13,7 +13,7 @@ function App() {
     <>
      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<All/>}>
+          <Route path="/Signature-App/" element={<All/>}>
             <Route index element={<Home/>} />
             <Route path="signature" element={< SignatureBox/>} />
             <Route path="compressImage" element={< ImageCompressor/>} />
